@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './auth.scss'
 import Lorby from '../images/lorby-logo.svg'
 import { useNavigate } from 'react-router-dom';
@@ -6,8 +6,17 @@ import { ReactComponent as EyeDisable} from '../images/eye-disable.svg'
 import { ReactComponent as EyeActive} from '../images/eye-active.svg'
 import { useFormik } from 'formik';
 import * as yup from 'yup'
+import { AuthContext } from '../../context/AuthContextProvider';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
+    const { handleLogin } = useContext(AuthContext)
+
+    const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate()
+
+
 
     const loginFormik = useFormik({
         initialValues: {
@@ -27,8 +36,14 @@ const Login = () => {
             .matches(/[!@#$%^&*(),.?":{}|<>]/, 'Добавьте минимум 1 спецсимвол'),
         })
     })
-    const navigate = useNavigate()
-    const [showPassword, setShowPassword] = useState(false)
+
+    const handleSave = (e) => {
+        e.preventDefault()
+        let formData = new FormData()
+        formData.append('username', loginFormik.values.username)
+        formData.append('password', loginFormik.values.password)
+        handleLogin(formData)
+    }
 
     const handleToggleShowPassword = () => {
         setShowPassword(!showPassword)
@@ -36,8 +51,9 @@ const Login = () => {
     return (
 
         <div className='login-container'>
+            <ToastContainer style={{marginLeft: '25%'}} position='top-center' autoClose='10000'/>
             <img src={Lorby} alt="" />
-            <form action="">
+            <form action="submit" onSubmit={handleSave}>
             <h1>Вэлком бэк!</h1>
                 <input
                 name='username'

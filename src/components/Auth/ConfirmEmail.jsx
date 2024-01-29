@@ -11,7 +11,7 @@ import { AuthContext } from '../../context/AuthContextProvider';
 
 const ConfirmEmail = () => {
 
-    const { registeredEmail, handleLogin, error } = useContext(AuthContext)
+    const { registeredEmail, handleConfirmEmail, codeError } = useContext(AuthContext)
     
     const navigate = useNavigate()
 
@@ -33,7 +33,7 @@ const ConfirmEmail = () => {
         e.preventDefault()
         let formData = new FormData()
         formData.append('code', codeFormik.values.code.replace(/\s/g, ''))
-        handleLogin(formData)
+        handleConfirmEmail(formData)
     }
 
     
@@ -52,7 +52,7 @@ const ConfirmEmail = () => {
                 <h2 className='thirty-title'>{registeredEmail}</h2>
                 <InputMask
                 style={
-                error 
+                codeError 
                 ? 
                 {border: '1px solid red'} 
                 : 
@@ -68,9 +68,9 @@ const ConfirmEmail = () => {
                 maskChar='_'
                 className='code-input'
                 />
-                {error 
+                {codeError
                 ? 
-                <p style={{ position: 'absolute', color: 'red', marginTop: '47vh'}}>Неверный код</p>
+                <p style={{ position: 'absolute', color: 'red', marginTop: '33vh'}}>{codeError}</p>
                 :
                 null
                 }
