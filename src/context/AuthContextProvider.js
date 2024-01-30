@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createContext } from "react"
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -13,6 +13,11 @@ const AuthContextProvider = ({children}) => {
     const [isRegistered, setRegistered] = useState(false)
     const [isLogin, setLogin] = useState(false)
     const navigate = useNavigate()
+
+    useEffect(() => {
+        navigate('/login')
+
+    }, [])
 
 
     const handleRegister = async (formData, registeredEmail) => {
