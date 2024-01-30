@@ -21,7 +21,7 @@ const Home = () => {
         if  (localStorage.getItem('tokens')) {
             checkAuth()
         }
-    }, [])
+    })
 
     return (
         <div className='home-container'>

@@ -8,14 +8,12 @@ import { ReactComponent as ArrowBack} from '../images/arrow-icon.svg'
 import Emoji from 'react-emoji-render';
 import { useFormik } from 'formik';
 import * as yup from 'yup'
-import axios from 'axios';
-import ConfirmEmail from './ConfirmEmail';
 import { AuthContext } from '../../context/AuthContextProvider';
 
 
 const Register = () => {
     const {handleRegister} = useContext(AuthContext)
-    
+
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 

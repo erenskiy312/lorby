@@ -3,8 +3,6 @@ import Lorby from '../images/lorby-logo.svg'
 import InputMask from 'react-input-mask';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as ArrowBack} from '../images/arrow-icon.svg'
-import InputCode from 'react-input-code'
-import ReactCodeInput from 'react-code-input';
 import { useFormik } from 'formik';
 import * as yup from 'yup'
 import { AuthContext } from '../../context/AuthContextProvider';

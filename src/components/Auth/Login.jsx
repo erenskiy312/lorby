@@ -7,7 +7,7 @@ import { ReactComponent as EyeActive} from '../images/eye-active.svg'
 import { useFormik } from 'formik';
 import * as yup from 'yup'
 import { AuthContext } from '../../context/AuthContextProvider';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
