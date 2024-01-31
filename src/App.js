@@ -10,7 +10,7 @@ function App() {
       <Routes>
 
         <Route 
-        path="/"
+        path="/lorby"
         element={<Login/>}
         />
 

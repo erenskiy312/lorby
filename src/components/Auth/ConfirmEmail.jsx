@@ -82,7 +82,7 @@ const ConfirmEmail = () => {
                 >
                     Подтвердить
                 </button>
-                <p onClick={handleRegister}>Выслать код повторно</p>
+                <p>Выслать код повторно</p>
             </form>
         </div>
     );

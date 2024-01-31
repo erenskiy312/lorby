@@ -14,6 +14,11 @@ const AuthContextProvider = ({children}) => {
     const [isLogin, setLogin] = useState(false)
     const navigate = useNavigate()
 
+    useEffect(() => {
+        navigate('/lorby')
+
+    }, [])
+
 
     const handleRegister = async (formData, registeredEmail) => {
 
@@ -102,7 +107,7 @@ const AuthContextProvider = ({children}) => {
     const handleLogout = () => {
         localStorage.removeItem('tokens')
         localStorage.removeItem('email')
-        navigate('/')
+        navigate('/lorby')
     }
 
     const values = {

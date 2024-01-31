@@ -86,7 +86,7 @@ const Register = () => {
             <img src={Lorby} alt="" />
 
             <nav>
-                <ArrowBack className='arrow-back' onClick={() => navigate('/')}/>
+                <ArrowBack className='arrow-back' onClick={() => navigate('/lorby')}/>
                 <p>Назад</p>
             </nav>
 
