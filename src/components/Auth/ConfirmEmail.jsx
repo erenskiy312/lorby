@@ -9,7 +9,7 @@ import { AuthContext } from '../../context/AuthContextProvider';
 
 const ConfirmEmail = () => {
 
-    const { registeredEmail, handleConfirmEmail, codeError } = useContext(AuthContext)
+    const { registeredEmail, handleConfirmEmail, codeError, handleRegister } = useContext(AuthContext)
     
     const navigate = useNavigate()
 
@@ -82,7 +82,7 @@ const ConfirmEmail = () => {
                 >
                     Подтвердить
                 </button>
-                <p>Выслать код повторно</p>
+                <p onClick={handleRegister}>Выслать код повторно</p>
             </form>
         </div>
     );
