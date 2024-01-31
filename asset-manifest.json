@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lorby/static/css/main.cc31a0c5.css",
-    "main.js": "/lorby/static/js/main.d354876e.js",
+    "main.js": "/lorby/static/js/main.6cf4d2d3.js",
     "static/media/lorby-logo.svg": "/lorby/static/media/lorby-logo.1c9ada497c5e70a1a2d551bb096c50c9.svg",
     "static/media/lorby-human.svg": "/lorby/static/media/lorby-human.f1622c5a59c7ea382032f4936a183b54.svg",
     "static/media/eye-disable.svg": "/lorby/static/media/eye-disable.8c0271b94709a2bb4b50cf5010e8d67f.svg",
@@ -9,10 +9,10 @@
     "index.html": "/lorby/index.html",
     "static/media/arrow-icon.svg": "/lorby/static/media/arrow-icon.1c0e63622510ed7b92254fdd78291f51.svg",
     "main.cc31a0c5.css.map": "/lorby/static/css/main.cc31a0c5.css.map",
-    "main.d354876e.js.map": "/lorby/static/js/main.d354876e.js.map"
+    "main.6cf4d2d3.js.map": "/lorby/static/js/main.6cf4d2d3.js.map"
   },
   "entrypoints": [
     "static/css/main.cc31a0c5.css",
-    "static/js/main.d354876e.js"
+    "static/js/main.6cf4d2d3.js"
   ]
 }
