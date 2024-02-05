@@ -69,6 +69,7 @@ const Login = () => {
                 value={loginFormik.values.password} 
                 className='password-input' 
                 type={showPassword ? 'text' : 'password'} 
+                autoComplete='off'
                 placeholder='Введи пароль' />
                 {showPassword 
                 ? 
