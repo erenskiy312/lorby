@@ -105,8 +105,8 @@ const AuthContextProvider = ({children}) => {
     // }
 
     const handleLogout = () => {
-        localStorage.removeItem('tokens')
-        localStorage.removeItem('email')
+        localStorage.removeItem('tokens'),
+        localStorage.removeItem('email'),
         navigate('/lorby')
     }
 
